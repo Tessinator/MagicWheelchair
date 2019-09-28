@@ -163,7 +163,11 @@ void loop() {
   
   if (justpressed[0]) {
     justpressed[0] = 0;
-    playfile("ruffruff.WAV");
+    delay(1000);
+    if(pressed[0])
+    {
+      playfile("ruffruff.WAV");
+    }
   }
   else if (justpressed[1]) {
       justpressed[1] = 0;
