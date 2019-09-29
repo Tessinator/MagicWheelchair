@@ -171,19 +171,35 @@ void loop() {
   }
   else if (justpressed[1]) {
       justpressed[1] = 0;
-      playfile("laws.WAV");
+      delay(1000);
+      if(pressed[1])
+      {
+        playfile("laws.WAV");
+      }
   }
   else if (justpressed[2]) {
       justpressed[2] = 0;
-      playfile("theme.WAV");
+      delay(1000);
+      if(pressed[1])
+      {
+        playfile("theme.WAV");
+      }
   }
   else if (justpressed[3]) {
       justpressed[3] = 0;
-      playfile("treat.WAV");
+      delay(1000);
+      if(pressed[1])
+      {
+        playfile("treat.WAV");
+      }
   } 
   else if (justpressed[4]) {
       justpressed[4] = 0;
-      playfile("case.WAV");
+      delay(1000);
+      if(pressed[1])
+      {
+        playfile("case.WAV");
+      }
   } 
  
 }

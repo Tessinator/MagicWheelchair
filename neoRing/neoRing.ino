@@ -5,11 +5,11 @@
 #include <Adafruit_NeoPixel.h>
 
 // Which pin on the Arduino is connected to the NeoPixels?
-#define PIN            6
+#define PIN            7
 
 // How many NeoPixels are attached to the Arduino?
 // The rings we have have 12 NeoPixels
-#define NUMPIXELS      16
+#define NUMPIXELS      24
 
 //brightness macro
 #define BRIGHTNESS     10
@@ -30,7 +30,7 @@ void loop() {
   for(int i = 0; i < NUMPIXELS; i++){
 
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(255,255,255));
+    pixels.setPixelColor(i, pixels.Color(150,0,0));
     pixels.setBrightness(BRIGHTNESS); 
 
     pixels.show(); 
