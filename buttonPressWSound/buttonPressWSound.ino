@@ -63,9 +63,12 @@ void setup() {
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(13, LOW);
+  
  
   // pin13 LED
-  pinMode(13, OUTPUT);
+  //pinMode(13, OUTPUT);
  
   // Make input & enable pull-up resistors on switch pins
   for (i=0; i< NUMBUTTONS; i++) {
@@ -166,8 +169,10 @@ void loop() {
     delay(1000);
     if(pressed[0])
     {
+      pinMode(13, HIGH); //send a signal to second microprocessor to start LED animation
       playfile("ruffruff.WAV");
     }
+    
   }
   else if (justpressed[1]) {
       justpressed[1] = 0;
@@ -211,9 +216,9 @@ void playcomplete(char *name) {
   // call our helper to find and play this name
   playfile(name);
   while (wave.isplaying) {
-  // do nothing while its playing
+    pinMode(13, HIGH);
   }
-  // now its done playing
+    pinMode(13, LOW);
 }
 
 void playfile(char *name) {
